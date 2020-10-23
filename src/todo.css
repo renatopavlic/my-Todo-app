@@ -5,9 +5,17 @@
   border: 1px solid lightgrey;
   border-radius: 5px;
   width: 60%;
-  margin: 5px !important;
+  margin: 20px 0 !important;
+  background-color: lightgrey;
 }
 
 .todo__list > li {
   flex: 0.7;
+}
+
+@media only screen and (max-width: 760px) {
+  .todo__list {
+    justify-content: space-around;
+    width: 300px;
+  }
 }

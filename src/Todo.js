@@ -63,8 +63,6 @@ function Todo(props) {
         </Modal>
       <List className="todo__list">
         <ListItem>
-          <ListItemAvatar>
-          </ListItemAvatar>
           <ListItemText primary={props.todo.todo} secondary="dummy date" />
         </ListItem>
         <Button variant="contained" color="primary" onClick={handleOpen}>EDIT</Button>
