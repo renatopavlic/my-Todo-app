@@ -13,11 +13,12 @@ function App() {
 
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
+  
   console.log("ovo je input " + input);
 
   useEffect(() => {
     db.collection("todos").orderBy("timestamp", "desc").onSnapshot(snapshot => {
-      setTodos(snapshot.docs.map(doc => doc.data().todo))
+      setTodos(snapshot.docs.map(doc => ({id: doc.id, todo: doc.data().todo})))
     })
   }, []);
 
@@ -47,7 +48,7 @@ function App() {
         <Button disabled={!input} type="submit" onClick={addTodo} variant="contained" color="primary">Add Todo</Button>
         <ul >
           {todos.map( todo => (
-            <Todo text={todo} />
+            <Todo todo={todo} />
           ) )}
         </ul>
       </form>
