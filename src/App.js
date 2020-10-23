@@ -39,10 +39,10 @@ function App() {
   return (
     <div className="App">
 
-      <h1>hello world</h1>
+      <h1>Todo App</h1>
       <form>
         <FormControl>
-          <InputLabel>Todo app</InputLabel>
+          <InputLabel>Enter todo</InputLabel>
           <Input  value={input} onChange={event => setInput(event.target.value)} />
         </FormControl>
         <Button disabled={!input} type="submit" onClick={addTodo} variant="contained" color="primary">Add Todo</Button>

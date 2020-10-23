@@ -1,3 +1,13 @@
 .todo__list {
   text-align: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  width: 60%;
+  margin: 5px !important;
+}
+
+.todo__list > li {
+  flex: 0.7;
 }

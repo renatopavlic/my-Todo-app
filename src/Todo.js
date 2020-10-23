@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { ListItem, List, ListItemText, Avatar, ListItemAvatar, Button, Modal } from '@material-ui/core';
+import { ListItem, List, ListItemText, ListItemAvatar, Button, Modal } from '@material-ui/core';
 
 import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 
@@ -67,8 +67,8 @@ function Todo(props) {
           </ListItemAvatar>
           <ListItemText primary={props.todo.todo} secondary="dummy date" />
         </ListItem>
-        <button onClick={handleOpen}>EDIT</button>
-        <DeleteForeverIcon onClick={event => {db.collection("todos").doc(props.todo.id).delete();
+        <Button variant="contained" color="primary" onClick={handleOpen}>EDIT</Button>
+        <DeleteForeverIcon style={{margin: "5px"}} color="secondary" onClick={event => {db.collection("todos").doc(props.todo.id).delete();
         }} />
       </List>
     </>
